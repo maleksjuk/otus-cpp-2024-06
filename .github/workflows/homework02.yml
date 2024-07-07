@@ -17,4 +17,4 @@ jobs:
       - run: cmake --build .
       # - run: cmake --build . --target test
       - run: cmake --install .
-      - run: diff <(cat ip_filter.tsv | ip_filter | md5sum) <(echo "24e7a7b2270daee89c64d3ca5fb3da1a  -")
+      - run: diff <(cat 02/ip_filter.tsv | ip_filter | md5sum) <(echo "24e7a7b2270daee89c64d3ca5fb3da1a  -")
