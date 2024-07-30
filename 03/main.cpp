@@ -1,0 +1,22 @@
+#include "my_allocator.h"
+// #include "my_container.h"
+
+#include <vector>
+#include <iostream>
+
+int main()
+{
+	std::vector<int, MyAllocator<int>> v;
+	
+	for (int i = 0; i < 30; i++)
+	{
+		std::cout << "Add " << i << std::endl;
+		v.push_back(i);
+	}
+
+	for (auto item : v)
+		std::cout << item << " ";
+	std::cout << std::endl;
+
+	return 0;
+}
